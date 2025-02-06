@@ -1,0 +1,138 @@
+
+ion-toolbar {
+    --background: #000000; /* Blue background */
+    --color: #ffffff;
+  }
+  /* Icon container for larger screens */
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between items */
+  }
+  
+  .icon-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and label vertically */
+    align-items: center; /* Center align icon and label */
+    justify-content: center;
+    text-align: center; /* Ensure text is centered */
+    width: 60px; /* Set a consistent width for all items */
+  
+  }
+  
+  .icon-item ion-button {
+    --background: #6e0f0f; /* Icon background color */
+    --color: #FFFFFF; /* Icon color */
+    height: 50px;
+    width: 50px;
+    margin-bottom: 5px; /* Space between icon and label */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #FFFFFF; /* Outline (border) */
+    border-radius: 50%;
+  }
+  
+  .icon-item ion-icon {
+    font-size: 24px; /* Adjust icon size */
+  
+  }
+  
+  .icon-label {
+    font-size: 12px; /* Label text size */
+    color: #000000; /* Label color */
+  }
+  
+  
+  /* Hover Effect */
+  .icon-container ion-button:hover {
+    --background: #340505;
+  }
+  
+  .icon-container ion-button-inner {
+    color: #FFFFFF; /* Set button-inner to white */
+  }
+  
+  .hamburger-menu {
+    display: none;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+      position: relative; /* Ensure it’s positioned within its context */
+      z-index: 1000; /* Bring to front */
+    }
+    .icon-container {
+      display: none; /* Hide icons for smaller screens */
+    }
+  }
+  
+  /* Menu Styles */
+  ion-menu {
+    --width: 300px;
+    --background: #FFF8E1; /* Light beige menu background */
+    --border-color: transparent; /* Remove borders */
+    --box-shadow: none; /* Eliminate black shadows */
+    z-index: 10;
+  }
+  
+  ion-menu::part(container) {
+    background-color: #6e0f0f !important; /* Ensure consistent background color */
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Menu Item Styles */
+  ion-menu ion-item {
+    font-size: 16px;
+    --background: #6e0f0f;
+    --color: #ffffff;
+    border-radius: 8px;
+    margin: 5px 10px;
+  }
+  
+  ion-menu ion-item:hover {
+    --background: #6e0f0f;
+    --color: #FFFFFF; /* White text on hover */
+  }
+  
+  ion-menu ion-icon {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  ion-menu ion-icon:hover {
+    color: #6e0f0f;
+  }
+  
+  /* Styling for the active page */
+  .icon-item .active {
+    position: relative;
+  }
+  
+  .icon-item .active::after {
+    content: '';
+    position: absolute;
+    bottom: -22px; /* Adjust based on spacing */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Adjust the line width */
+    height: 2px; /* Adjust the line height */
+    background-color: #000000; /* Line color */
+  }
+  
+  .list-md {
+    --background: #6e0f0f;
+    border-radius: 10px;
+  }
+  
+  .list-md hydrated {
+    font-size: 14px;
+    --color: #fffdfd;
+    padding: 10px 15px;
+  }
+  
+  
